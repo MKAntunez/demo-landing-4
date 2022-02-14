@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>archivo de Texto</title>
+</head>
+<body>
+    <input type="text"  id="texto">
+    <input type="button" value="guardar" id="btnAgregarElemento" onclick="agregatElemnto();">
+    <input type="button" value="listar" id="btnListarArreglo" onclick="ListarArreglo();">
+    <div id="resultado"></div>
+
+    <script>
+        
+        window.onload = function() {
+            window.datos =[];
+        }
+
+        function agregatElemnto(){
+            let dato = document.getElementById('texto').value;
+            datos.push(dato);            
+        }
+
+        function ListarArreglo(){
+            let recultado = document.getElementById('resultado');
+            recultado.innerHTML = '';
+            for( const dato of datos){
+                let datoParrafo = document.createElement('p');
+                datoParrafo.innerHTML = dato;
+                resultado.appendChild(datoParrafo);
+            }
+        }
+    </script>
+</body>
+</html>

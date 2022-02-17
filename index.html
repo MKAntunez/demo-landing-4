@@ -33,11 +33,15 @@
             }
         }
         function esPalindromo(texto){
-            return texto.split('').reverse().join('') == texto;
+            texto = texto.toLowerCase();
+            texto = texto.replace(/\s*/g,'');
+            return texto == texto.split('').reverse().join('');
         }
 
-        console.log(esPalindromo('pepe'));
+        console.log(esPalindromo('reconocer'));
         console.log(esPalindromo('anna'));
+        console.log(esPalindromo('pepe'));
+        console.log(esPalindromo('A luna ese anula'));
     </script>
 </body>
 </html>
